@@ -37,3 +37,38 @@ nav a {
   border-radius: 12px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+.hero-header {
+  background-image: url("uploads/5ecfd636-ad53-411a-87bf-b72089ae6cb3.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.3); /* Oscurece la imagen para que el texto resalte */
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.nav-menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  color: #ffeaa7;
+}
