@@ -1,3 +1,4 @@
+
 backend:
   name: git-gateway
   branch: main
@@ -7,10 +8,9 @@ public_folder: "/uploads"
 
 collections:
   - name: "posts"
-    label: "Posts"
+    label: "Entradas"
     folder: "posts"
     create: true
-    slug: "{{slug}}"
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Contenido", name: "body", widget: "markdown" }
