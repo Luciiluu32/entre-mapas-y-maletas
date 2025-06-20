@@ -1,0 +1,25 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "posts"
+    label: "Entradas del blog"
+    folder: "posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+  - name: "imprescindibles"
+    label: "Mis imprescindibles"
+    folder: "posts/imprescindibles"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Producto", name: "title", widget: "string" }
+      - { label: "Descripción", name: "body", widget: "markdown" }
+      - { label: "Enlace", name: "link", widget: "string" }
