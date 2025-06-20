@@ -6,12 +6,11 @@ media_folder: "uploads"
 public_folder: "/uploads"
 
 collections:
-  - name: "paginas"
-    label: "Páginas"
-    files:
-      - label: "Inicio"
-        name: "inicio"
-        file: "index.html"
-        fields:
-          - { label: "Título", name: "titulo", widget: "string" }
-          - { label: "Contenido", name: "contenido", widget: "markdown" }
+  - name: "posts"
+    label: "Posts"
+    folder: "posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Contenido", name: "body", widget: "markdown" }
