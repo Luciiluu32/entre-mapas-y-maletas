@@ -1,0 +1,36 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fefaf3;
+  color: #333;
+}
+header.hero {
+  background-image: url('static/img/playa.webp');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 100px 20px 40px;
+  color: white;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+nav a {
+  text-decoration: none;
+  color: #00334e;
+  font-weight: bold;
+}
+main {
+  padding: 20px;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #e6ded0;
+}
