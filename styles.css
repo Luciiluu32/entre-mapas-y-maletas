@@ -1,36 +1,59 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #fefaf3;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fef9f2;
   color: #333;
 }
-header.hero {
-  background-image: url('static/img/playa.webp');
+
+.hero {
+  background-image: url('uploads/header-playa.png');
   background-size: cover;
   background-position: center;
-  text-align: center;
-  padding: 100px 20px 40px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
-nav ul {
+
+.hero h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.nav {
+  background-color: #dcd3c3;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.nav ul {
   list-style: none;
   padding: 0;
-  margin: 10px 0 0;
+  margin: 0;
   display: flex;
   justify-content: center;
   gap: 20px;
 }
-nav a {
+
+.nav a {
   text-decoration: none;
-  color: #00334e;
+  color: #333;
   font-weight: bold;
 }
+
 main {
   padding: 20px;
-}
-footer {
   text-align: center;
-  padding: 20px;
-  background-color: #e6ded0;
+}
+
+.intro h2 {
+  font-size: 1.5em;
+  color: #3e3e3e;
+}
+
+.intro p {
+  color: #555;
 }
