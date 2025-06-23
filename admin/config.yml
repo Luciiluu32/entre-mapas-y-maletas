@@ -1,0 +1,28 @@
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Resumen", name: "summary", widget: "string" }
+      - { label: "Imagen destacada", name: "thumbnail", widget: "image" }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+      - { label: "Etiquetas", name: "tags", widget: "list" }
+  - name: "menu"
+    label: "Menú"
+    files:
+      - label: "Menú Principal"
+        name: "main_menu"
+        file: "config.json"
+        fields:
+          - { label: "Orden de Menú", name: "order", widget: "list", default: ["Inicio", "Destinos", "Consejos", "Mis imprescindibles", "Sobre mí"] }
