@@ -1,0 +1,61 @@
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+collections:
+  - name: "inicio"
+    label: "Inicio"
+    files:
+      - label: "Inicio"
+        name: "inicio"
+        file: "content/inicio.md"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Contenido", name: "body", widget: "markdown" }
+
+  - name: "destinos"
+    label: "Destinos"
+    folder: "content/destinos"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Resumen", name: "summary", widget: "text" }
+      - { label: "Imagen destacada", name: "thumbnail", widget: "image" }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+      - { label: "Etiquetas", name: "tags", widget: "list" }
+
+  - name: "consejos"
+    label: "Consejos"
+    folder: "content/consejos"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Resumen", name: "summary", widget: "text" }
+      - { label: "Imagen destacada", name: "thumbnail", widget: "image" }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+      - { label: "Etiquetas", name: "tags", widget: "list" }
+
+  - name: "imprescindibles"
+    label: "Mis imprescindibles"
+    folder: "content/imprescindibles"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+
+  - name: "sobre-mi"
+    label: "Sobre mí"
+    files:
+      - label: "Sobre mí"
+        name: "sobre-mi"
+        file: "content/sobre-mi.md"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Contenido", name: "body", widget: "markdown" }

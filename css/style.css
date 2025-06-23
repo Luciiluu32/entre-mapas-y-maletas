@@ -1,0 +1,57 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffdf8;
+  color: #333;
+}
+
+.hero {
+  background-image: url('../assets/images/playa.webp');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  position: relative;
+  clip-path: ellipse(100% 75% at 50% 25%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay h1 {
+  font-size: 3em;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+nav.sticky-menu {
+  position: sticky;
+  top: 0;
+  background-color: #e0f7fa;
+  display: flex;
+  justify-content: center;
+  padding: 1em 0;
+}
+
+nav.sticky-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+}
+
+nav.sticky-menu a {
+  text-decoration: none;
+  color: #0077b6;
+  font-weight: bold;
+}
+
+footer {
+  background: #e0f7fa;
+  padding: 2em;
+  text-align: center;
+}
+
+.social-icons img {
+  width: 24px;
+  margin: 0 8px;
+}
