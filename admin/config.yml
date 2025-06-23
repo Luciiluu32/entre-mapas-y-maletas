@@ -1,0 +1,52 @@
+
+backend:
+  name: github
+  repo: Luciluuu32/entre-mapas-y-maletas
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+site_url: https://entre-mapas-y-maletas.netlify.app
+display_url: https://entre-mapas-y-maletas.netlify.app
+
+collections:
+  - name: "paginas"
+    label: "Páginas del sitio"
+    files:
+      - label: "Inicio"
+        name: "inicio"
+        file: "content/inicio.md"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Contenido", name: "body", widget: "markdown" }
+      - label: "Sobre mí"
+        name: "sobre-mi"
+        file: "content/sobre-mi.md"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Contenido", name: "body", widget: "markdown" }
+
+  - name: "destinos"
+    label: "Destinos"
+    folder: "content/destinos"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Resumen", name: "summary", widget: "text" }
+      - { label: "Imagen destacada", name: "thumbnail", widget: "image" }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+      - { label: "Etiquetas", name: "tags", widget: "list", default: [] }
+
+  - name: "consejos"
+    label: "Consejos de viaje"
+    folder: "content/consejos"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Resumen", name: "summary", widget: "text" }
+      - { label: "Imagen destacada", name: "thumbnail", widget: "image" }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+      - { label: "Etiquetas", name: "tags", widget: "list", default: [] }
