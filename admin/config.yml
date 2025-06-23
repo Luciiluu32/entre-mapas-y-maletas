@@ -1,0 +1,76 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+locale: "es"
+
+collections:
+  - name: "inicio"
+    label: "Inicio"
+    files:
+      - label: "Contenido principal"
+        name: "contenido"
+        file: "content/inicio.md"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Contenido", name: "body", widget: "markdown" }
+
+  - name: "destinos"
+    label: "Destinos"
+    folder: "content/destinos"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Resumen", name: "summary", widget: "text" }
+      - { label: "Imagen destacada", name: "thumbnail", widget: "image" }
+      - { label: "Etiqueta", name: "tags", widget: "list", default: [] }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+
+  - name: "consejos"
+    label: "Consejos"
+    folder: "content/consejos"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Resumen", name: "summary", widget: "text" }
+      - { label: "Imagen destacada", name: "thumbnail", widget: "image" }
+      - { label: "Etiqueta", name: "tags", widget: "list", default: [] }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+
+  - name: "imprescindibles"
+    label: "Mis Imprescindibles"
+    folder: "content/imprescindibles"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Producto", name: "title", widget: "string" }
+      - { label: "Descripción", name: "summary", widget: "text" }
+      - { label: "Imagen del producto", name: "thumbnail", widget: "image" }
+      - { label: "Enlace de afiliado", name: "affiliate_link", widget: "string" }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+
+  - name: "sobre-mi"
+    label: "Sobre mí"
+    files:
+      - label: "Contenido de Sobre mí"
+        name: "contenido"
+        file: "content/sobre-mi.md"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Contenido", name: "body", widget: "markdown" }
+
+  - name: "colores"
+    label: "Colores del sitio"
+    files:
+      - label: "Configuración de colores"
+        name: "colores"
+        file: "content/config/colores.md"
+        fields:
+          - { label: "Color principal", name: "primary", widget: "string" }
+          - { label: "Color secundario", name: "secondary", widget: "string" }
+          - { label: "Color de fondo", name: "background", widget: "string" }
