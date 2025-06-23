@@ -1,0 +1,56 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fffaf4;
+  color: #333;
+}
+header {
+  background: url('static/playa.webp') no-repeat center center/cover;
+  position: relative;
+  height: 50vh;
+  color: white;
+}
+.overlay {
+  background-color: rgba(0, 64, 128, 0.5);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+header h1 {
+  font-size: 2.5rem;
+  margin: 0.5em 0;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+  padding: 0;
+}
+nav li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.curva {
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  height: 70px;
+  background: #fffaf4;
+  border-radius: 0 0 100% 100%;
+}
+main {
+  padding: 2em;
+}
+footer {
+  background-color: #eee0d1;
+  padding: 1em;
+  text-align: center;
+}
+footer .social-icons img {
+  height: 24px;
+  margin: 0 0.5em;
+}
