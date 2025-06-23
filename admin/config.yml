@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
-  branch: main
   login: true
+  auth_type: github
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
