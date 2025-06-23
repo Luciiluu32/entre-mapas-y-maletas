@@ -1,28 +1,76 @@
-
 backend:
   name: git-gateway
   branch: main
 
-media_folder: "assets/images"
-public_folder: "/assets/images"
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+locale: "es"
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "blog"
+  - name: "inicio"
+    label: "Inicio"
+    files:
+      - label: "Contenido principal"
+        name: "contenido"
+        file: "content/inicio.md"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Contenido", name: "body", widget: "markdown" }
+
+  - name: "destinos"
+    label: "Destinos"
+    folder: "content/destinos"
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "Título", name: "title", widget: "string" }
-      - { label: "Resumen", name: "summary", widget: "string" }
+      - { label: "Resumen", name: "summary", widget: "text" }
       - { label: "Imagen destacada", name: "thumbnail", widget: "image" }
+      - { label: "Etiqueta", name: "tags", widget: "list", default: [] }
       - { label: "Contenido", name: "body", widget: "markdown" }
-      - { label: "Etiquetas", name: "tags", widget: "list" }
-  - name: "menu"
-    label: "Menú"
+
+  - name: "consejos"
+    label: "Consejos"
+    folder: "content/consejos"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Resumen", name: "summary", widget: "text" }
+      - { label: "Imagen destacada", name: "thumbnail", widget: "image" }
+      - { label: "Etiqueta", name: "tags", widget: "list", default: [] }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+
+  - name: "mis_imprescindibles"
+    label: "Mis imprescindibles"
+    folder: "content/mis-imprescindibles"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Producto", name: "title", widget: "string" }
+      - { label: "Descripción", name: "summary", widget: "text" }
+      - { label: "Imagen", name: "thumbnail", widget: "image" }
+      - { label: "Enlace de afiliado", name: "link", widget: "string" }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+
+  - name: "sobre_mi"
+    label: "Sobre mí"
     files:
-      - label: "Menú Principal"
-        name: "main_menu"
-        file: "config.json"
+      - label: "Texto sobre mí"
+        name: "sobre"
+        file: "content/sobre-mi.md"
         fields:
-          - { label: "Orden de Menú", name: "order", widget: "list", default: ["Inicio", "Destinos", "Consejos", "Mis imprescindibles", "Sobre mí"] }
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Contenido", name: "body", widget: "markdown" }
+
+  - name: "menu"
+    label: "Menú de navegación"
+    file: "data/menu.json"
+    fields:
+      - label: "Enlaces"
+        name: "links"
+        widget: "list"
+        fields:
+          - { label: "Texto", name: "label", widget: "string" }
+          - { label: "URL", name: "url", widget: "string" }
