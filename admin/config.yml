@@ -2,22 +2,20 @@ backend:
   name: git-gateway
   login: true
   auth_type: github
-  
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
 
-locale: "es"
+media_folder: "static/uploads"
+public_folder: "/uploads"
 
 collections:
   - name: "inicio"
     label: "Inicio"
     files:
-      - label: "Contenido principal"
-        name: "contenido"
-        file: "content/inicio.md"
+      - label: "Contenido de Inicio"
+        name: "home"
+        file: "content/home.md"
         fields:
-          - { label: "Título", name: "title", widget: "string" }
-          - { label: "Contenido", name: "body", widget: "markdown" }
+          - { label: "Título principal", name: "title", widget: "string" }
+          - { label: "Texto de bienvenida", name: "body", widget: "markdown" }
 
   - name: "destinos"
     label: "Destinos"
@@ -27,8 +25,8 @@ collections:
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Resumen", name: "summary", widget: "text" }
+      - { label: "Etiqueta (país o ciudad)", name: "tags", widget: "list" }
       - { label: "Imagen destacada", name: "thumbnail", widget: "image" }
-      - { label: "Etiqueta", name: "tags", widget: "list", default: [] }
       - { label: "Contenido", name: "body", widget: "markdown" }
 
   - name: "consejos"
@@ -39,39 +37,53 @@ collections:
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Resumen", name: "summary", widget: "text" }
+      - { label: "Etiqueta (tipo de consejo)", name: "tags", widget: "list" }
       - { label: "Imagen destacada", name: "thumbnail", widget: "image" }
-      - { label: "Etiqueta", name: "tags", widget: "list", default: [] }
       - { label: "Contenido", name: "body", widget: "markdown" }
 
-  - name: "imprescindibles"
-    label: "Mis Imprescindibles"
+  - name: "mis-imprescindibles"
+    label: "Mis imprescindibles"
     folder: "content/imprescindibles"
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "Producto", name: "title", widget: "string" }
-      - { label: "Descripción", name: "summary", widget: "text" }
-      - { label: "Imagen del producto", name: "thumbnail", widget: "image" }
-      - { label: "Enlace de afiliado", name: "affiliate_link", widget: "string" }
-      - { label: "Contenido", name: "body", widget: "markdown" }
+      - { label: "Descripción", name: "body", widget: "markdown" }
+      - { label: "Enlace afiliado", name: "link", widget: "string" }
+      - { label: "Imagen", name: "image", widget: "image" }
 
   - name: "sobre-mi"
     label: "Sobre mí"
     files:
-      - label: "Contenido de Sobre mí"
-        name: "contenido"
+      - label: "Contenido Sobre Mí"
+        name: "sobre-mi"
         file: "content/sobre-mi.md"
         fields:
           - { label: "Título", name: "title", widget: "string" }
           - { label: "Contenido", name: "body", widget: "markdown" }
+          - { label: "Imagen de perfil", name: "profile_image", widget: "image" }
+
+  - name: "menu"
+    label: "Menú de navegación"
+    files:
+      - label: "Configuración del Menú"
+        name: "menu"
+        file: "data/menu.yml"
+        fields:
+          - label: "Enlaces"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Nombre", name: "label", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
 
   - name: "colores"
     label: "Colores del sitio"
     files:
-      - label: "Configuración de colores"
+      - label: "Colores"
         name: "colores"
-        file: "content/config/colores.md"
+        file: "data/colores.yml"
         fields:
-          - { label: "Color principal", name: "primary", widget: "string" }
-          - { label: "Color secundario", name: "secondary", widget: "string" }
-          - { label: "Color de fondo", name: "background", widget: "string" }
+          - { label: "Color primario", name: "primario", widget: "color" }
+          - { label: "Color secundario", name: "secundario", widget: "color" }
+          - { label: "Color de fondo", name: "fondo", widget: "color" }
