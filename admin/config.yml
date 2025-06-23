@@ -42,35 +42,36 @@ collections:
       - { label: "Etiqueta", name: "tags", widget: "list", default: [] }
       - { label: "Contenido", name: "body", widget: "markdown" }
 
-  - name: "mis_imprescindibles"
+  - name: "imprescindibles"
     label: "Mis imprescindibles"
-    folder: "content/mis-imprescindibles"
+    folder: "content/imprescindibles"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Producto", name: "title", widget: "string" }
+      - { label: "Nombre del producto", name: "title", widget: "string" }
       - { label: "Descripción", name: "summary", widget: "text" }
-      - { label: "Imagen", name: "thumbnail", widget: "image" }
       - { label: "Enlace de afiliado", name: "link", widget: "string" }
+      - { label: "Imagen", name: "thumbnail", widget: "image" }
+      - { label: "Categorías", name: "tags", widget: "list", default: [] }
       - { label: "Contenido", name: "body", widget: "markdown" }
 
-  - name: "sobre_mi"
+  - name: "sobre-mi"
     label: "Sobre mí"
     files:
-      - label: "Texto sobre mí"
-        name: "sobre"
+      - label: "Contenido"
+        name: "contenido"
         file: "content/sobre-mi.md"
         fields:
           - { label: "Título", name: "title", widget: "string" }
-          - { label: "Contenido", name: "body", widget: "markdown" }
+          - { label: "Biografía", name: "body", widget: "markdown" }
 
-- name: "menu"
+  - name: "menu"
     label: "Menú de navegación"
-    file: "data/menu.json"
+    file: "content/menu.json"
     fields:
-      - label: "Enlaces"
-        name: "links"
+      - label: "Elementos del menú"
+        name: "items"
         widget: "list"
         fields:
           - { label: "Texto", name: "label", widget: "string" }
-          - { label: "URL", name: "url", widget: "string" }
+          - { label: "Enlace", name: "url", widget: "string" }
